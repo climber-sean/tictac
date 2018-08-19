@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    font-family: arial;
+}
+
+button {
+    width: 30vw;
+    height: 15vh;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 3rem;
+    color: white;
+}
+
+h2 {
+    font-weight: 800;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    margin: 0;
+}
+
+.overlay {
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+    position: fixed;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay.displayOff {
+    display: none;
+}
+
+.popup {
+    height: 30vh;
+    width: 80vw;
+    background-color: dimgrey;
+    border-radius: 10px;
+    border: 10px solid lightgrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container {
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: cornflowerblue;
+}
+
+.row {
+    display: flex;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: lightgrey;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: 10px solid dimgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 0.25s;
+}
+
+.box:hover {
+    -webkit-box-shadow: inset 0px 0px 20px 5px rgba(0,0,0,0.3);
+    -moz-box-shadow: inset 0px 0px 20px 5px rgba(0,0,0,0.3);
+    box-shadow: inset 0px 0px 20px 5px rgba(0,0,0,0.3);
+}
+
+.box::before {
+    content = "a";
+}
+
+span.nought {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    border: 15px solid dimgrey;
+    transition: border 0.5s;
+}
+
+span.cross {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: dimgrey;
+    -webkit-clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+    clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+    transition: width 0.5s;
+}
+
+span.cross.fade {
+    width: 60px;
+}
+
+@media only screen and (min-width: 1024px) {
+    .popup {
+        width: 50vw;
+    }
+    
+    button {
+        width: 40%;
+    }
+}

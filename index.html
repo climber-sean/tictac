@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <title>Tic-Tac-Toe Project</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    
+    <body>
+        <div id="opponent" class="overlay">
+            <div class="popup">
+                <h2>Play Vs.</h2>
+                <div class="buttons">
+                <button value="c" onclick="toggle(this.value)">Computer</button>
+                <button value="f" onclick="toggle(this.value)">Friend</button>
+                </div>
+            </div>
+        </div>
+        <div id="start" class="overlay displayOff">
+            <div class="popup">
+                <h2>Select Icon</h2>
+                <div class="buttons">
+                <button onclick="choose(0)">O</button>
+                <button onclick="choose(1)">X</button>
+                </div>
+            </div>
+        </div>
+        <div id="gameover" class="overlay displayOff">
+            <div class="popup">
+                <h2 id="gameover-text">ENTER MESSAGE HERE</h2>
+                <div class="buttons">
+                <button onclick="reset()">Reset</button>
+                </div>
+            </div>    
+        </div>
+        <div class="container">
+            <h1>Tic-Tac-Toe</h1>
+            <div class="row">
+                <div class="box" id="box-1" onclick="select(this.id, 0)" data-icon=""></div>
+                <div class="box" id="box-2" onclick="select(this.id, 1)" data-icon=""></div>
+                <div class="box" id="box-3" onclick="select(this.id, 2)" data-icon=""></div>
+            </div>
+            <div class="row">
+                <div class="box" id="box-4" onclick="select(this.id, 3)" data-icon=""></div>
+                <div class="box" id="box-5" onclick="select(this.id, 4)" data-icon=""></div>
+                <div class="box" id="box-6" onclick="select(this.id, 5)" data-icon=""></div>
+            </div>
+            <div class="row">
+                <div class="box" id="box-7" onclick="select(this.id, 6)" data-icon=""></div>
+                <div class="box" id="box-8" onclick="select(this.id, 7)" data-icon=""></div>
+                <div class="box" id="box-9" onclick="select(this.id, 8)" data-icon=""></div>
+            </div>
+        </div>
+        
+    <script src="javascript.js"></script>
+    </body>
+    
+</html>
